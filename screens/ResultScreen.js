@@ -1,4 +1,5 @@
 import React, { useCallback, useState, useRef }  from 'react';
+
 import {
   Image,
   Linking,
@@ -12,7 +13,8 @@ import {
   Dimensions,
   ActivityIndicator,
   Alert,
-  ImageBackground
+  ImageBackground,
+  PermissionsAndroid
 } from 'react-native';
 import ViewShot from 'react-native-view-shot';
 import { captureRef } from "react-native-view-shot";
@@ -55,17 +57,32 @@ export default class ResultScreen extends React.Component {
   }
 
 
+  checkAndroidPermission = async () => {
+    try {
+      const permission = PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE;
+      await PermissionsAndroid.request(permission);
+      Promise.resolve();
+    } catch (error) {
+      Promise.reject(error);
+    }
+};
+
+
   captureRefView=()=>{
     captureRef(this.refs.viewRef, {
       format: "jpg",
       quality: 0.9
     }).then(
-      uri => {
+      async uri => {
         console.log(uri)
         this.setState({
           uriImage:uri.toString()
         })
         // alert(uri)
+
+        if (Platform.OS === 'android'){
+          await this.checkAndroidPermission();
+        }
         CameraRoll.saveToCameraRoll(uri)
         .then(Alert.alert('සුරැකුවා', 'Gallery එකට Save කරා')) 
         .catch(err => console.log('err:', err))

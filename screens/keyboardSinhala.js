@@ -291,7 +291,7 @@ export default class MyKeyboard extends Component {
   }
   
   onPress55 = () => {
-    insertText(this.props.tag, ' ු');
+    insertText(this.props.tag, 'ු');
   }
 
   onPress56 = () => {
