@@ -7,6 +7,7 @@ import {
   NativeModules,
   TouchableOpacity,
   Keyboard,
+  Dimensions
 } from 'react-native';
 
 import { 
@@ -18,6 +19,10 @@ import {
   hideKeyboard,
   switchSystemKeyboard
 } from 'react-native-custom-keyboard-kit';
+
+
+
+const deviceWidth = Dimensions.get('window').width;
 
 export default class MyKeyboard extends Component {
 
@@ -291,7 +296,8 @@ export default class MyKeyboard extends Component {
   }
   
   onPress55 = () => {
-    insertText(this.props.tag, 'ු');
+    insertText(this.props.tag, 'ුූ');
+    this.onPressBackSpace();
   }
 
   onPress56 = () => {
@@ -396,70 +402,70 @@ export default class MyKeyboard extends Component {
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPressN1}>
               <Text style={styles.buttonLabel}>
-                1
+                {'1'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPressN2}>
               <Text style={styles.buttonLabel}>
-                2
+                {'2'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPressN3}>
               <Text style={styles.buttonLabel}>
-                3
+                {'3'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPressN4}>
               <Text style={styles.buttonLabel}>
-                4
+                {'4'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPressN5}>
               <Text style={styles.buttonLabel}>
-                5
+                {'5'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPressN6}>
               <Text style={styles.buttonLabel}>
-                6
+                {'6'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPressN7}>
               <Text style={styles.buttonLabel}>
-                7
+                {'7'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPressN8}>
               <Text style={styles.buttonLabel}>
-                8
+                {'8'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPressN9}>
               <Text style={styles.buttonLabel}>
-                9
+                {'9'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPressN0}>
               <Text style={styles.buttonLabel}>
-                0
+                {'0'}
               </Text>
             </TouchableOpacity>
           </View>
@@ -468,70 +474,70 @@ export default class MyKeyboard extends Component {
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress1}>
               <Text style={styles.buttonLabel}>
-              අ
+              {'අ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress2}>
               <Text style={styles.buttonLabel}>
-              ඉ
+              {'ඉ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress3}>
               <Text style={styles.buttonLabel}>
-              ඊ
+              {'ඊ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress4}>
               <Text style={styles.buttonLabel}>
-              උ
+              {'උ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress5}>
               <Text style={styles.buttonLabel}>
-              එ
+              {'එ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress6}>
               <Text style={styles.buttonLabel}>
-              ඔ
+              {'ඔ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress7}>
               <Text style={styles.buttonLabel}>
-               ‍ඕ
+               ‍{'ඕ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress8}>
               <Text style={styles.buttonLabel}>
-              ක
+              {'ක'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress9}>
               <Text style={styles.buttonLabel}>
-              ඛ
+              {'ඛ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress10}>
               <Text style={styles.buttonLabel}>
-              ග
+              {'ග'}
               </Text>
             </TouchableOpacity>
           </View>
@@ -540,70 +546,70 @@ export default class MyKeyboard extends Component {
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress11}>
               <Text style={styles.buttonLabel}>
-              ඝ
+              {'ඝ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress12}>
               <Text style={styles.buttonLabel}>
-              ඞ
+              {'ඞ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress13}>
               <Text style={styles.buttonLabel}>
-              ඟ
+              {'ඟ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress14}>
               <Text style={styles.buttonLabel}>
-              ච
+              {'ච'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress15}>
               <Text style={styles.buttonLabel}>
-              ඡ
+              {'ඡ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress16}>
               <Text style={styles.buttonLabel}>
-              ජ
+              {'ජ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress17}>
               <Text style={styles.buttonLabel}>
-              ඣ
+              {'ඣ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress18}>
               <Text style={styles.buttonLabel}>
-              ඤ
+              {'ඤ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress19}>
               <Text style={styles.buttonLabel}>
-              ඥ
+              {'ඥ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress20}>
               <Text style={styles.buttonLabel}>
-              ඦ
+              {'ඦ'}
               </Text>
             </TouchableOpacity>
           </View>
@@ -612,70 +618,70 @@ export default class MyKeyboard extends Component {
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress21}>
               <Text style={styles.buttonLabel}>
-              ට
+              {'ට'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress22}>
               <Text style={styles.buttonLabel}>
-              ඨ
+              {'ඨ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress23}>
               <Text style={styles.buttonLabel}>
-              ඩ
+              {'ඩ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress24}>
               <Text style={styles.buttonLabel}>
-              ඪ
+              {'ඪ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress25}>
               <Text style={styles.buttonLabel}>
-              ඳ
+              {'ඳ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress26}>
               <Text style={styles.buttonLabel}>
-              ඬ
+              {'ඬ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress27}>
               <Text style={styles.buttonLabel}>
-              ත
+              {'ත'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress28}>
               <Text style={styles.buttonLabel}>
-              ථ
+              {'ථ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress29}>
               <Text style={styles.buttonLabel}>
-              ද
+              {'ද'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress30}>
               <Text style={styles.buttonLabel}>
-              ධ
+              {'ධ'}
               </Text>
             </TouchableOpacity>
           </View>
@@ -684,70 +690,70 @@ export default class MyKeyboard extends Component {
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress31}>
               <Text style={styles.buttonLabel}>
-              න
+              {'න'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress32}>
               <Text style={styles.buttonLabel}>
-              ණ
+              {'ණ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress33}>
               <Text style={styles.buttonLabel}>
-              ප
+              {'ප'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress34}>
               <Text style={styles.buttonLabel}>
-              ඵ
+              {'ඵ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress35}>
               <Text style={styles.buttonLabel}>
-              බ
+              {'බ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress36}>
               <Text style={styles.buttonLabel}>
-              භ
+              {'භ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress37}>
               <Text style={styles.buttonLabel}>
-              ම
+              {'ම'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress38}>
               <Text style={styles.buttonLabel}>
-              ඹ
+              {'ඹ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress39}>
               <Text style={styles.buttonLabel}>
-              ය
+              {'ය'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress40}>
               <Text style={styles.buttonLabel}>
-              ර
+              {'ර'}
               </Text>
             </TouchableOpacity>
           </View>
@@ -756,70 +762,70 @@ export default class MyKeyboard extends Component {
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress41}>
               <Text style={styles.buttonLabel}>
-              ල
+              {'ල'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress42}>
               <Text style={styles.buttonLabel}>
-              ළ
+              {'ළ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress43}>
               <Text style={styles.buttonLabel}>
-              ව
+              {'ව'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress44}>
               <Text style={styles.buttonLabel}>
-              හ
+              {'හ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress45}>
               <Text style={styles.buttonLabel}>
-              ශ
+              {'ශ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress46}>
               <Text style={styles.buttonLabel}>
-              ෂ
+              {'ෂ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress47}>
               <Text style={styles.buttonLabel}>
-              ස
+              {'ස'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress48}>
               <Text style={styles.buttonLabel}>
-              ෆ
+              {'ෆ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress49}>
               <Text style={styles.buttonLabel}>
-              ්‍
+             {' ්‍'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress50}>
               <Text style={styles.buttonLabel}>
-              ‍ා
+              {'‍ා'}
               </Text>
             </TouchableOpacity>
           </View>
@@ -828,70 +834,70 @@ export default class MyKeyboard extends Component {
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress51}>
               <Text style={styles.buttonLabel}>
-              ැ
+             {' ැ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress52}>
               <Text style={styles.buttonLabel}>
-              ෑ
+             {' ෑ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress53}>
               <Text style={styles.buttonLabel}>
-              ි
+            {'  ි'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress54}>
               <Text style={styles.buttonLabel}>
-              ී
+            {'  ී'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress55}>
               <Text style={styles.buttonLabel}>
-              ු
+            {'  ු'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress56}>
               <Text style={styles.buttonLabel}>
-              ුූ
+            {'  ුූ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress57}>
               <Text style={styles.buttonLabel}>
-              ෙ
+             {' ෙ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress58}>
               <Text style={styles.buttonLabel}>
-              ේ
+             {' ේ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress59}>
               <Text style={styles.buttonLabel}>
-              ෛ
+             {' ෛ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress60}>
               <Text style={styles.buttonLabel}>
-              ො
+             {' ො'}
               </Text>
             </TouchableOpacity>
           </View>
@@ -900,70 +906,70 @@ export default class MyKeyboard extends Component {
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress61}>
               <Text style={styles.buttonLabel}>
-              ෝ
+             {' ෝ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress62}>
               <Text style={styles.buttonLabel}>
-              ෞ
+             {' ෞ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress63}>
               <Text style={styles.buttonLabel}>
-              ෳ
+             {' ෳ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress64}>
               <Text style={styles.buttonLabel}>
-              ෘ‍
+             {' ෘ‍'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress65}>
               <Text style={styles.buttonLabel}>
-              ං
+             {' ං'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress66}>
               <Text style={styles.buttonLabel}>
-              ඃ
+             {' ඃ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress67}>
               <Text style={styles.buttonLabel}>
-              ඍ
+              {'ඍ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress68}>
               <Text style={styles.buttonLabel}>
-              ඎ
+              {'ඎ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress69}>
               <Text style={styles.buttonLabel}>
-              ඏ
+              {'ඏ'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={this.onPress70}>
               <Text style={styles.buttonLabel}>
-              ඐ
+              {'ඐ'}
               </Text>
             </TouchableOpacity>
           </View>
@@ -972,35 +978,35 @@ export default class MyKeyboard extends Component {
           <View style={styles.signButton}>
             <TouchableOpacity onPress={this.onPress71}>
               <Text style={styles.buttonLabelSign}>
-                #
+                {'#'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.signButton}>
             <TouchableOpacity onPress={this.onPress72}>
               <Text style={styles.buttonLabelSign}>
-                ?
+                {'?'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.signButton}>
             <TouchableOpacity onPress={this.onPress73}>
               <Text style={styles.buttonLabelSign}>
-                !
+                {'!'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.spaceButton}>
             <TouchableOpacity onPress={this.onPressSpace}>
               <Text style={styles.buttonLabelSpace}>
-                ________
+                {'________'}
               </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.keyboardButton}>
             <TouchableOpacity onPress={this.onPressSwitchKeyboard}>
               <Text style={styles.buttonLabelKey}>
-                abc..
+                {'abc...'}
               </Text>
             </TouchableOpacity>
           </View>
@@ -1036,64 +1042,73 @@ const styles = StyleSheet.create({
     borderColor: "#808080",
     width: 270,
     fontSize: 19,
+    fontFamily:'iskpota',
   },
   buttonLabel: {
-    fontSize: 15,
+    color:'black',
+    fontSize: deviceWidth/24,
     borderWidth: 0.2,
+    padding:deviceWidth/320,
     borderColor: "#808080",
-     padding: 1.5,
     textAlign: "center",
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius:5,
-   
+    fontFamily:'iskpota'
     
   },
 
   buttonLabelBack: {
-    fontSize: 15,
+    color:'black',
+    fontSize: deviceWidth/24,
     borderWidth: 0.2,
     borderColor: "#808080",
-     padding: 1.5,
+     padding: deviceWidth/320,
     textAlign: "center",
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius:5,
     backgroundColor:'#DC143C',
-    opacity: 0.3
+    opacity: 0.3,
+    fontFamily:'iskpota',
   },
 
   buttonLabelSpace: {
-    fontSize: 15,
+    color:'black',
+    fontSize: deviceWidth/24,
     borderWidth: 0.2,
     borderColor: "#808080",
-     padding: 1.5,
+     padding: deviceWidth/320,
     textAlign: "center",
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius:5,
     backgroundColor:'#DCDCDC',
-    opacity: 0.3
+    opacity: 0.3,
+    
       
   },
   buttonLabelSign: {
-    fontSize: 15,
+    color:'black',
+    fontSize: deviceWidth/24,
     borderWidth: 0.2,
     borderColor: "#808080",
-     padding: 1.5,
+     padding: deviceWidth/320,
     textAlign: "center",
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius:5,
     backgroundColor:'#90EE90',
-    opacity: 0.3
+    opacity: 0.3,
+    
   },
 
   buttonLabelKey: {
-    fontSize: 15,
+    color:'black',
+    fontSize: deviceWidth/24,
     borderWidth: 0.2,
     borderColor: "#808080",
-     padding: 1.5,
+     padding: deviceWidth/320,
     textAlign: "center",
     justifyContent: 'center',
     alignItems: 'center',
@@ -1103,23 +1118,24 @@ const styles = StyleSheet.create({
   },
   button: {
     width: "10%",
+    height:"5%"
   },
   signButton: {
     width: "10%",
- 
+    height:"5%"
   },
   spaceButton: {
     width: "30%",
-    
+    height:"5%"
   },
   backButton: {
     width: "20%",
-   
+    height:"5%"
   },
 
   keyboardButton: {
     width: "20%",
-      
+    height:"5%"
   },
 
 });

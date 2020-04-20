@@ -1,9 +1,6 @@
 import React from 'react';
 import {
   Image,
-  Linking,
-  Platform,
-  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -15,10 +12,6 @@ import {
 import { 
   CustomTextInput,
   register,
-  insertText,
-  backSpace,
-  uninstall,
-  hideKeyboard,
 } from 'react-native-custom-keyboard-kit';
 
 import MasonryList from '@appandflow/masonry-list';
