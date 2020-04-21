@@ -22,6 +22,14 @@ import CameraRoll from '@react-native-community/cameraroll';
 import RangeSlider from 'rn-range-slider';
 const deviceWidth = Dimensions.get('window').width;
 import Share from 'react-native-share';
+import { TestIds } from '@react-native-firebase/admob';
+import { 
+  AdMobBanner, 
+  AdMobInterstitial, 
+  PublisherBanner,
+  AdMobRewarded
+} from 'react-native-admob'
+
 
 export default class ResultScreen extends React.Component {
   state = {
@@ -78,6 +86,10 @@ export default class ResultScreen extends React.Component {
         CameraRoll.saveToCameraRoll(uri)
           .then(Alert.alert('සුරැකුවා', 'Gallery එකට Save කරා'))
           .catch((err) => console.log('err:', err));
+
+          AdMobInterstitial.setAdUnitID(TestIds.INTERSTITIAL);
+          //AdMobInterstitial.setTestDeviceID('EMULATOR');
+          AdMobInterstitial.requestAd(AdMobInterstitial.showAd);
       },
       (error) => console.error('Oops, snapshot failed', error),
     );
@@ -205,6 +217,13 @@ export default class ResultScreen extends React.Component {
       style={{width: 100, height: 100}}
       source={{uri: uriImage
     }}/> */}
+   <View style={{height:110}}> 
+     <AdMobBanner
+  adSize="largeBanner"
+  adUnitID={TestIds.BANNER} 
+  testDeviceID="EMULATOR"
+   />
+   </View>
           <ViewShot
             ref="viewRef"
             options={{format: 'jpg', quality: 0.9}}
@@ -270,6 +289,11 @@ export default class ResultScreen extends React.Component {
               </View>
             </ImageBackground>
           </ViewShot>
+          {/* <AdMobBanner
+  adSize="SMART_BANNER"
+  adUnitID={TestIds.BANNER} 
+  testDeviceID="EMULATOR"
+   /> */}
         </View>
         {/* {loaded ? */}
         {/* onPress={this.onSaveImage} */}

@@ -12,10 +12,13 @@
   },
   "dependencies": {
     "@react-native-community/cameraroll": "^1.5.2",
+    "@react-native-firebase/admob": "^6.4.0",
+    "@react-native-firebase/app": "^6.4.0",
     "react": "16.11.0",
     "react-native": "0.62.2",
     "react-native-admob": "^2.0.0-beta.6",
     "react-native-custom-keyboard-kit": "^1.0.2",
+    "react-native-exception-handler": "^2.10.8",
     "react-native-range-slider": "^0.1.2",
     "react-native-share": "^3.2.0",
     "react-native-view-shot": "^3.1.2",

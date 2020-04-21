@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "601067524293",
+    "firebase_url": "https://sinhala-meme-maker.firebaseio.com",
+    "project_id": "sinhala-meme-maker",
+    "storage_bucket": "sinhala-meme-maker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601067524293:android:ef531bb866cfcb901d20ac",
+        "android_client_info": {
+          "package_name": "com.sinhala"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "601067524293-8hjnml01jej4it329n7acr6v3ao08v98.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM9n1Iv8RpB-ZVytYsOBxmAEMbVaQkQKE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "601067524293-8hjnml01jej4it329n7acr6v3ao08v98.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

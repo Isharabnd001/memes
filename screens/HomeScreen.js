@@ -17,14 +17,28 @@ import {
 import MasonryList from '@appandflow/masonry-list';
 import ResultScreen from './ResultScreen';
 import MyKeyboard from './keyboardSinhala'
+import { TestIds } from '@react-native-firebase/admob';
 
+import { 
+  AdMobBanner, 
+  AdMobInterstitial, 
+  PublisherBanner,
+  AdMobRewarded
+} from 'react-native-admob'
 const deviceWidth = Dimensions.get('window').width;
 const widthHalves = deviceWidth/3;
 
 const MEMES = ['yuno','success','xy','sparta','interesting','sk','philosoraptor','fa','tenguy', 'afraid', 'older', 'aag', 'tried', 'biw', 'stew', 'blb', 'kermit', 'bd', 'ch', 'cbg', 'wonka', 'cb', 'keanu', 'dsm', 'live', 'ants', 'doge', 'alwaysonbeat', 'ermg', 'facepalm', 'firsttry', 'fwp', 'fbf', 'fmr', 'fry', 'ggg', 'hipster', 'icanhas', 'crazypills', 'mw', 'noidea', 'regret', 'boat', 'hagrid', 'sohappy', 'captain', 'bender', 'inigo', 'iw', 'ackbar', 'happening', 'joker', 'ive', 'll', 'away', 'morpheus', 'mb', 'badchoice', 'mmm', 'jetpack', 'imsorry', 'red', 'mordor', 'oprah', 'oag', 'remembers', 'jw', 'patrick', 'rollsafe', 'sad-obama', 'sad-clinton', 'sadfrog', 'sad-bush', 'sad-biden', 'sad-boehner', 'saltbae', 'sarcasticbear', 'dwight', 'sb', 'ss', 'sf', 'dodgson', 'money', 'snek', 'sohot', 'nice', 'awesome', 'awesome', 'awkward', 'awkward', 'fetch', 'scc', 'ski', 'officespace', 'toohigh', 'bs', 'fine', 'center', 'both', 'winter', 'buzz', 'yodawg', 'yallgot', 'bad', 'elf', 'chosen'];
 
 const MEMELIST = MEMES.map((meme, i) => ({id: i, meme}));
-
+const  firebaseConfig = {
+  apiKey: "AIzaSyBM9n1Iv8RpB-ZVytYsOBxmAEMbVaQkQKE",
+  databaseURL:"https://sinhala-meme-maker.firebaseio.com/",
+  projectId: "project-601067524293",
+ 
+  appId: "1:601067524293:android:ef531bb866cfcb901d20ac",
+ 
+};
 register('sinhala', () => MyKeyboard);
 export default class HomeScreen extends React.Component {
   state = {
@@ -34,6 +48,31 @@ export default class HomeScreen extends React.Component {
     activeMeme: 'tenguy',
     showResult: false,
   };
+
+  componentDidMount(){
+ //  this.initializeApp();
+  }
+  // initializeApp=async()=>{
+
+  //   await firebase.initializeApp(firebaseConfig);
+ 
+  //   admob().setRequestConfiguration({
+  //    // Update all future requests suitable for parental guidance
+  //    maxAdContentRating: MaxAdContentRating.PG,
+ 
+  //    // Indicates that you want your content treated as child-directed for purposes of COPPA.
+  //    tagForChildDirectedTreatment: true,
+ 
+  //    // Indicates that you want the ad request to be handled in a
+  //    // manner suitable for users under the age of consent.
+  //    tagForUnderAgeOfConsent: true,
+  //  }).then(() => {
+  //    // Request config successfully set!
+  //  });
+  //  }
+ 
+  
+
   onChangeActiveMeme(activeMeme) {
     this.setState({
       activeMeme
@@ -44,10 +83,18 @@ export default class HomeScreen extends React.Component {
       showResult: !this.state.showResult,
     });
   }
-  onShowResult = () => {
+  onShowResult = async () => {
+   // InterstitialAd.createForAdRequest(TestIds.INTERSTITIAL);
+  //  await firebase.initializeApp(firebaseConfig);
+  //   RewardedAd.createForAdRequest(TestIds.REWARDED);
+
     this.setState({
       showResult: true,
     });
+  }
+
+  bannerError(){
+    alert("banner Error")
   }
   processText = (input) => {
     return input.replace('_', '__').replace('-', '--').replace('?', '~q').replace('%', '~p').replace('#', '~h').replace('/', '~s').replace('\"', '\'\'').replace(' ', '_');
@@ -56,9 +103,35 @@ export default class HomeScreen extends React.Component {
     const {top, bottom, memes, activeMeme, showResult} = this.state;
     return (
       <View style={styles.container}>
+        {/* <BannerAd unitId={TestIds.BANNER} /> */}
+        {/* <BannerAd
+      unitId={ca-app-pub-4545195509459817~8863613210}
+      size={BannerAdSize.FLUID}
+      requestOptions={{
+        requestNonPersonalizedAdsOnly: true,
+      }}
+      onAdLoaded={() => {
+        console.log('Advert loaded');
+      }}
+      onAdFailedToLoad={(error) => {
+        console.error('Advert failed to load: ', error);
+      }}
+    /> */}
+
+<View> 
+     <AdMobBanner
+  adSize="fullBanner"
+  adUnitID={TestIds.BANNER} 
+  testDeviceID="EMULATOR"
+   />
+   </View>
+  
+
         <View style={{height: 50}}>
-          <Image source={require('../assets/images/ezgif-6-baa1748cc925.gif')} resizeMode={'contain'} style={{width: null, height: null, flex: 1}}/>
+          <Image source={require('../assets/images/ezgif-6-baa1748cc925.gif')} resizeMode={'contain'} style={{width: null, height: null, marginTop:5,flex: 1}}/>
         </View>
+  
+ 
         {/* <TextInput underlineColorAndroid={'transparent'} style={styles.input} value={top} onChangeText={(top) => this.setState({top})} placeholder={'Input top text here'} /> */}
         <CustomTextInput
           customKeyboardType="sinhala"
