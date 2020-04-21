@@ -22,7 +22,7 @@ import CameraRoll from '@react-native-community/cameraroll';
 import RangeSlider from 'rn-range-slider';
 const deviceWidth = Dimensions.get('window').width;
 import Share from 'react-native-share';
-import { TestIds } from '@react-native-firebase/admob';
+//import { TestIds } from '@react-native-firebase/admob';
 import { 
   AdMobBanner, 
   AdMobInterstitial, 
@@ -87,9 +87,9 @@ export default class ResultScreen extends React.Component {
           .then(Alert.alert('සුරැකුවා', 'Gallery එකට Save කරා'))
           .catch((err) => console.log('err:', err));
 
-          AdMobInterstitial.setAdUnitID(TestIds.INTERSTITIAL);
-          //AdMobInterstitial.setTestDeviceID('EMULATOR');
-          AdMobInterstitial.requestAd(AdMobInterstitial.showAd);
+          // AdMobInterstitial.setAdUnitID(TestIds.INTERSTITIAL);
+          // //AdMobInterstitial.setTestDeviceID('EMULATOR');
+          // AdMobInterstitial.requestAd(AdMobInterstitial.showAd);
       },
       (error) => console.error('Oops, snapshot failed', error),
     );
@@ -220,7 +220,7 @@ export default class ResultScreen extends React.Component {
    <View style={{height:110}}> 
      <AdMobBanner
   adSize="largeBanner"
-  adUnitID={TestIds.BANNER} 
+  adUnitID="ca-app-pub-4545195509459817/7188473429" 
   testDeviceID="EMULATOR"
    />
    </View>

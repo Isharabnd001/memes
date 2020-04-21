@@ -17,7 +17,7 @@ import {
 import MasonryList from '@appandflow/masonry-list';
 import ResultScreen from './ResultScreen';
 import MyKeyboard from './keyboardSinhala'
-import { TestIds } from '@react-native-firebase/admob';
+//import { TestIds } from '@react-native-firebase/admob';
 
 import { 
   AdMobBanner, 
@@ -31,14 +31,14 @@ const widthHalves = deviceWidth/3;
 const MEMES = ['yuno','success','xy','sparta','interesting','sk','philosoraptor','fa','tenguy', 'afraid', 'older', 'aag', 'tried', 'biw', 'stew', 'blb', 'kermit', 'bd', 'ch', 'cbg', 'wonka', 'cb', 'keanu', 'dsm', 'live', 'ants', 'doge', 'alwaysonbeat', 'ermg', 'facepalm', 'firsttry', 'fwp', 'fbf', 'fmr', 'fry', 'ggg', 'hipster', 'icanhas', 'crazypills', 'mw', 'noidea', 'regret', 'boat', 'hagrid', 'sohappy', 'captain', 'bender', 'inigo', 'iw', 'ackbar', 'happening', 'joker', 'ive', 'll', 'away', 'morpheus', 'mb', 'badchoice', 'mmm', 'jetpack', 'imsorry', 'red', 'mordor', 'oprah', 'oag', 'remembers', 'jw', 'patrick', 'rollsafe', 'sad-obama', 'sad-clinton', 'sadfrog', 'sad-bush', 'sad-biden', 'sad-boehner', 'saltbae', 'sarcasticbear', 'dwight', 'sb', 'ss', 'sf', 'dodgson', 'money', 'snek', 'sohot', 'nice', 'awesome', 'awesome', 'awkward', 'awkward', 'fetch', 'scc', 'ski', 'officespace', 'toohigh', 'bs', 'fine', 'center', 'both', 'winter', 'buzz', 'yodawg', 'yallgot', 'bad', 'elf', 'chosen'];
 
 const MEMELIST = MEMES.map((meme, i) => ({id: i, meme}));
-const  firebaseConfig = {
-  apiKey: "AIzaSyBM9n1Iv8RpB-ZVytYsOBxmAEMbVaQkQKE",
-  databaseURL:"https://sinhala-meme-maker.firebaseio.com/",
-  projectId: "project-601067524293",
+// const  firebaseConfig = {
+//   apiKey: "AIzaSyBM9n1Iv8RpB-ZVytYsOBxmAEMbVaQkQKE",
+//   databaseURL:"https://sinhala-meme-maker.firebaseio.com/",
+//   projectId: "project-601067524293",
  
-  appId: "1:601067524293:android:ef531bb866cfcb901d20ac",
+//   appId: "1:601067524293:android:ef531bb866cfcb901d20ac",
  
-};
+// };
 register('sinhala', () => MyKeyboard);
 export default class HomeScreen extends React.Component {
   state = {
@@ -121,7 +121,7 @@ export default class HomeScreen extends React.Component {
 <View> 
      <AdMobBanner
   adSize="fullBanner"
-  adUnitID={TestIds.BANNER} 
+  adUnitID="ca-app-pub-4545195509459817/7188473429" 
   testDeviceID="EMULATOR"
    />
    </View>

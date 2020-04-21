@@ -2,8 +2,8 @@ import React from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import HomeScreen from './screens/HomeScreen';
 //import cacheAssetsAsync from './utilities/cacheAssetsAsync';
-import firebase from '@react-native-firebase/app';
-import admob, { MaxAdContentRating } from '@react-native-firebase/admob';
+//import firebase from '@react-native-firebase/app';
+//import admob, { MaxAdContentRating } from '@react-native-firebase/admob';
 
 
 // const  firebaseConfig = {
